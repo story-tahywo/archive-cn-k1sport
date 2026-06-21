@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明指南 · k1体育</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f2f4;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1e2226;
+      line-height: 1.65;
+      padding: 2rem 1.2rem;
+    }
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* 顶部导航 — 轻量极简 */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: #ffffff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border: 1px solid #e4e8ec;
+      margin-bottom: 2.8rem;
+    }
+
+    .nav-brand {
+      font-weight: 550;
+      font-size: 1.3rem;
+      letter-spacing: 0.3px;
+      color: #1e293b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.5rem 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2d3a4a;
+      font-size: 0.95rem;
+      padding: 0.2rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #3b8bdb;
+    }
+
+    /* hero 区块 */
+    .hero-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2.6rem 2.4rem;
+      margin-bottom: 2.8rem;
+      border: 1px solid #e0e5ea;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      margin-bottom: 1.2rem;
+      color: #12171c;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      max-width: 700px;
+      color: #3a4858;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: #1e293b;
+      color: white;
+      padding: 0.6rem 2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .hero-cta:hover {
+      background: #2d3f57;
+    }
+
+    /* 场景模块 — 三个卡片 */
+    .scenes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.6rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.8rem 1.6rem;
+      border: 1px solid #e2e7ec;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .scene-card h3 {
+      font-size: 1.25rem;
+      font-weight: 520;
+      margin-bottom: 0.75rem;
+      color: #1a2532;
+    }
+
+    .scene-card p {
+      color: #3e4c5c;
+      font-size: 0.96rem;
+    }
+
+    /* 常见说明 / 提醒卡片 */
+    .faq-section {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2rem 2.2rem;
+      border: 1px solid #dfe4e9;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2.8rem;
+    }
+
+    .faq-section h2 {
+      font-weight: 500;
+      font-size: 1.6rem;
+      margin-bottom: 1.4rem;
+      color: #14212e;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ebeff3;
+      padding: 0.9rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 510;
+      margin-bottom: 0.2rem;
+      color: #1f2c39;
+    }
+
+    .faq-answer {
+      color: #4b5a6b;
+      font-size: 0.95rem;
+    }
+
+    /* 内嵌链接样式 */
+    .inline-link {
+      color: #1b6bb0;
+      text-decoration: none;
+      font-weight: 480;
+      border-bottom: 1px dotted #9db9d4;
+      transition: border-bottom 0.2s;
+    }
+
+    .inline-link:hover {
+      border-bottom: 1px solid #1b6bb0;
+    }
+
+    /* 页脚 */
+    .page-footer {
+      text-align: center;
+      padding: 1.8rem 0 0.6rem;
+      font-size: 0.85rem;
+      color: #65768a;
+      border-top: 1px solid #d9dee4;
+      margin-top: 1.2rem;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .hero-card {
+        padding: 1.8rem 1.2rem;
+      }
+      .hero-title {
+        font-size: 1.7rem;
+      }
+      .top-nav {
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
+      }
+      .faq-section {
+        padding: 1.5rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+      <span class="nav-brand">📋 简明指南</span>
+      <div class="nav-links">
+        <a href="#guide">使用参考</a>
+        <a href="#scenes">常见场景</a>
+        <a href="#faq">说明</a>
+      </div>
+    </nav>
+
+    <!-- hero 介绍 + 访问提醒角度 -->
+    <div class="hero-card">
+      <h1 class="hero-title">访问前值得了解的几点</h1>
+      <p class="hero-sub">
+        不论你是初次接触还是日常使用，事先了解平台的基本访问方式、设备适配习惯，能让整个体验更加顺畅。下面从几个常见角度帮你梳理。
+      </p>
+      <a href="https://cn-k1sport.com" class="hero-cta">k1体育</a>
+    </div>
+
+    <!-- 三个场景模块  内容切入：简明指南与访问提醒 -->
+    <div class="scenes-grid" id="scenes">
+      <div class="scene-card">
+        <h3>📱 移动端浏览</h3>
+        <p>多数用户通过手机或平板访问。建议保持浏览器为最新版本，并开启 JavaScript 以确保页面功能完整。部分内容在竖屏下阅读更舒适。</p>
+      </div>
+      <div class="scene-card">
+        <h3>🖥️ 桌面端操作</h3>
+        <p>使用电脑访问时，推荐 Chrome、Edge 或 Safari 浏览器。窗口缩放至 80%–100% 通常能获得最佳视觉布局。收藏夹可保存常用链接。</p>
+      </div>
+      <div class="scene-card">
+        <h3>🔐 网络与安全提醒</h3>
+        <p>请通过正规渠道访问，并留意地址栏的链接拼写。如遇页面加载异常，可尝试刷新或稍后重试；避免在公共设备中保存个人密码。</p>
+      </div>
+    </div>
+
+    <!-- 常见说明 FAQ 摘要  温和、提示性 -->
+    <div class="faq-section" id="faq">
+      <h2>常见疑问与提醒</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">页面打开后显示不完整？</div>
+        <div class="faq-answer">可尝试清理浏览器缓存或切换网络环境。部分安全软件可能误拦页面资源，可暂时添加信任或调整拦截级别。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">是否需要在平台注册账号？</div>
+        <div class="faq-answer">浏览内容一般无需注册；使用特定功能时按页面提示操作即可。建议通过 <a href="https://cn-k1sport.com" class="inline-link">k1体育</a> 直接开始，无需额外跳转。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">内容更新频率如何？</div>
+        <div class="faq-answer">平台会根据运营节奏进行内容与功能更新，建议定期访问以获取最新信息。若遇到临时维护，页面通常会显示相应提示。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">如何获取更详细的帮助？</div>
+        <div class="faq-answer">页面内通常提供常见问题入口或联系方式。你也可以直接在浏览器中打开 <a href="https://cn-k1sport.com" class="inline-link">k1体育</a> 查找相关说明栏目。</div>
+      </div>
+    </div>
+
+    <!-- 轻量footer -->
+    <footer class="page-footer">
+      <p>简明指南 · 内容仅供参考，请以实际页面为准</p>
+    </footer>
+
+  </div>
+</body>
+</html>
